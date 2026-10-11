@@ -1,0 +1,15 @@
+{
+    "id":               "com.example.template",
+    "name":             "Template DLC",
+    "version":          "1.0.0",
+    "unityVersion":     "6000.4.12f1",
+    "frameworkVersion": "1.0.0",
+    "author":           "Your Name",
+    "description":      "Starting point for an SVU DLC plugin.",
+    "dlcType":          "3d",
+    "hasCode":          true,
+    "hasAssets":        true,
+    "assemblyName":     "TemplateDLC",
+    "dependencies":     [],
+    "autoHideInterface": true
+}

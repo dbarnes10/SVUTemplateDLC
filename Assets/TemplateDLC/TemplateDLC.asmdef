@@ -1,0 +1,14 @@
+{
+    "name": "TemplateDLC",
+    "rootNamespace": "",
+    "references": [ "Unity.ugui" ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": true,
+    "precompiledReferences": [ "DLCFramework.Interfaces.dll" ],
+    "autoReferenced": false,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
