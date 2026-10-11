@@ -1,8 +1,12 @@
 # SVUTemplateDLC
 
-A starting point for writing a DLC plugin for the SVU (Scalable Visualisation Unit) display wall.
+A starting point for writing a downloadable content (DLC) plugin for the Swinburne Virtual Universe (SVU) software.
 
-A DLC plugin is some Unity content plus a small C# assembly. You build both in this project and export them as a package. The SVU host loads the package at runtime into a subwindow on the wall, without being rebuilt itself.
+A DLC plugin is some Unity content plus a small C# assembly. You build both in this project and export them as a package. The SVU host loads the package at runtime on the display, without being rebuilt itself.
+
+DLC plugins for SVU are currently in development. The WebUI is not yet available so plugins can be loaded and displayed, but not controlled beyond SVU standard camera controls.
+
+DLC plugins for SVU will support cluser mode (mostly) transparently to the user. Curently cluster mode is being finalised and is not yet supported.
 
 This repository contains one working plugin, **TemplateDLC**, and the editor tools to set it up, check it and export it. All the tools live in one menu, **SVU DLC**.
 
@@ -12,13 +16,13 @@ This repository contains one working plugin, **TemplateDLC**, and the editor too
 
 - **The same Unity version as the SVU host.** The host rejects packages built with any other version. The project is set up for **Unity 6000.4.12f1**; check with the SVU team if the host has moved on.
 - URP 17 and Addressables 2.x, both already included.
-- The framework's interface DLL, which ships in `Assets/Plugins/DLCFramework/`. You don't need the host project.
+- The framework's interface DLL, which ships in `Assets/Plugins/DLCFramework/`. You don't need the host project, but you can use it to test your plugin if you want a lighter-weight test environment than the full SVU.
 
 ---
 
 ## Quick start
 
-1. **Clone the repository and open it in Unity.**
+1. **Fork then clone the repository and open it in Unity.**
 2. **Set up your plugin: SVU DLC ▸ Plugin Settings….**
    - Enter a plugin name (e.g. `Galaxy`) and your organisation's domain (e.g. `swinburne.edu.au`).
    - Fill in the display name, version, author and description, then click **Apply and Rename**.
@@ -28,7 +32,7 @@ This repository contains one working plugin, **TemplateDLC**, and the editor too
 5. **Choose SVU DLC ▸ Build and Export…** and click **Build and Export Package**.
 6. **Copy the exported `au.edu.swinburne.galaxy/` folder** into the host's DLC folder (by default `<persistentDataPath>/DLC/`). The host loads it by its package ID.
 
-Before you change anything, it's worth exporting the untouched template once and loading it on the host. You should see an **orange cube**. If you do, the whole pipeline works, including wiring. A white or blue cube means part of wiring failed (see [Troubleshooting](#troubleshooting)). In the editor the cube is blue until you press Play; the orange is applied at runtime.
+(correction required:) Before you change anything, it's worth exporting the untouched template once and loading it on the host. You should see an **orange cube**. If you do, the whole pipeline works, including wiring. A white or blue cube means part of wiring failed (see [Troubleshooting](#troubleshooting)). In the editor the cube is blue until you press Play; the orange is applied at runtime.
 
 ---
 
